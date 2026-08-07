@@ -11,3 +11,6 @@
 - 루프 및 중복집계 방지 -> visited 배열
 
 ## Note
+
+- visited도 vector(동적 배열)로 만들면 메모리를 효율적으로 쓸 수 있다
+- visited는 stack에 넣은 직후 true로 바꿔야 중복 탐색을 덜 한다

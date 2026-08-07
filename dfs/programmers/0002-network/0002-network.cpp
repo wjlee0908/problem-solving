@@ -4,34 +4,31 @@
 
 using namespace std;
 
-int solution(int n, vector<vector<int>> computers) {
-    const int MAX_N = 200;
-    
+int solution(int n, vector<vector<int>> computers) {    
     int count = 0;
-    int visited[MAX_N] = {false};
+    vector<bool> visited(n, false);
     
     // (idx)
     stack<int> st;
     
-    // root 순회
     for(int i = 0; i < n; i++) {
+        // root 순회
         if(visited[i]) continue;
         count += 1;
         
         st.push(i);
         
-        // 연결된 노드 dfs
+        // dfs
         while(!st.empty()) {
             int cur = st.top();
             st.pop();
 
-            visited[cur] = true;
-            
             for(int j = 0; j < n; j++) {
                 if (j == cur) continue;
                 
                 if (computers[cur][j] == 1 && !visited[j]) {
                     st.push(j);
+                    visited[j] = true;
                 }
             }
         }
