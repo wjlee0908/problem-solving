@@ -10,3 +10,4 @@
 ## Note
 
 - 선택 단계가 있다 -> BFS 떠올리기
+- visited로 loop 방지
