@@ -1,0 +1,3 @@
+- [바킹독 - 그리디 알고리즘](https://www.youtube.com/watch?v=De0Qg-2O80c)
+- 예시: 병합 정렬
+  - 두 배열의 포인터 2개만 비교한다
